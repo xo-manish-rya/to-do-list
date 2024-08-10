@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neue;
+}
+@font-face {
+    font-family: neue;
+    src: url(3856NeueMachina\ \(1\).ttf);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at 10% 20%, #d9daf8 0%, transparent 25%),
+                radial-gradient(circle at 95% 5%, #c5c5ff 0%, transparent 50%),
+                radial-gradient(circle at 25% 52%, #b2afff 0%, transparent 50%),
+                radial-gradient(circle at 30% 51%, #fd966c 0%, transparent 36%),
+                radial-gradient(circle at 66% 80%, #fd6c6c93 0%, transparent 56%);
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 500px;
+}
+.container .content{
+    width: 100%;
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border: 3px solid #000;
+    border-radius: 1rem;
+    box-shadow: 9px 9px 0px #000;
+}
+
+.content h1{
+    text-align: center;
+    margin-block-end: 1rem;
+    font-size: 2.2rem;
+}
+.content .form{
+    display: flex;
+}
+.content .form .add{
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    border: 1px solid white;
+    outline: none;
+    font-size: 1rem;
+    border: 2px solid rgba(0,0,0,1);
+    border-right: none;
+    border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form .add::placeholder{
+    font-size: 0.8em;
+}
+.form button{
+    min-width: 5rem;
+    outline: none;
+    border: 2px solid rgba(0,0,0,1);
+    background: #cb80dd;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+.container ol{
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: #fff repeating-linear-gradient(transparent 1%, transparent 99%, #000 99%, #000 100%);
+    background-size: 56px 56px;
+    padding: 1rem;
+    padding-inline: 3rem 1rem;
+    border: 3px solid #000;
+    border-radius: 1rem;
+    box-shadow: 9px 9px 0px #000;
+}
+.container ol li{
+    position: relative;
+    font-size: 1.3em;
+    height: 56px;
+}
+.container ol li p{
+    font-weight: bold;
+    position: relative;
+}
+.container ol li .remove{
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(remove.png);
+    background-size: cover; 
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px black;
+}
+
+.container ol li.done p{
+    text-decoration: line-through;
+    color: rgba(0,0,0,0.4);
+}
+.container ol li.done p::after{
+    content: '';
+    position: absolute;
+    right: 2rem;
+    top: -4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(check.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px black;
+}
+
+@media (max-width: 500px) {
+    .container{
+        width: 350px;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content .form .add{
+        padding: 0.4rem 0.3rem;
+    }
+    .content .form .add::placeholder{
+        font-size: 0.6em;
+    }
+    .content .form button{
+        font-size: 0.9rem;
+        /* padding: 0.4rem 0.3rem; */
+    }
+
+}
+
